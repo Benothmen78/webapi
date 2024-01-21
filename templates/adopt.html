@@ -1,0 +1,82 @@
+<!-- adopt.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='st.css') }}">
+    <title>Adoption</title>
+</head>
+<body>
+    <h1>Adoption Center</h1>
+
+    <h2>Choose an option:</h2>
+    <form method="post" action="{{ url_for('adopt') }}">
+        <label for="adopt">
+            <input type="radio" name="choice" id="adopt" value="adopt" required>
+            Adopt an animal
+        </label>
+        <label for="put_for_adoption">
+            <input type="radio" name="choice" id="put_for_adoption" value="put_for_adoption" required>
+            Put an animal for adoption
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Available Animals for Adoption:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Species</th>
+                <th>Age</th>
+                <th>Description</th>
+                <th>Contact</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for animal in animals %}
+                <tr>
+                    <td>{{ animal.id }}</td>
+                    <td>{{ animal.name }}</td>
+                    <td>{{ animal.species }}</td>
+                    <td>{{ animal.age }}</td>
+                    <td>{{ animal.description }}</td>
+                    <td>{{ animal.contact }}</td>
+                    <td>
+                        <form method="post" action="{{ url_for('adopt') }}">
+                            <input type="hidden" name="choice" value="adopt">
+                            <input type="hidden" name="animal_id" value="{{ animal.id }}">
+                            <button type="submit">Adopt</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div id="putForAdoptionForm" style="display: none;">
+        <h2>Put an Animal for Adoption:</h2>
+        <form method="post" action="{{ url_for('adopt') }}">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="species">Species:</label>
+            <input type="text" id="species" name="species" required><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea><br>
+
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact" required><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    

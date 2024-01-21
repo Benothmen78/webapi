@@ -1,0 +1,58 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Animal Protection - Login</title>
+</head>
+<body>
+    <div id="login-form">
+        <h2>Animal Protection-Login</h2>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <form id="login-form" method="post" action="{{ url_for('index') }}">
+            {{ form.hidden_tag() }}
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="submit">Login</button>
+        </form>
+        <script>
+            // JavaScript to handle form submission result
+            document.getElementById('login-form').addEventListener('submit', function (event) {
+                var form = event.target;
+                var username = form.elements.username.value;
+                var password = form.elements.password.value;
+        
+                // You can add additional validation here if needed
+        
+                // Example: Alert on unsuccessful login
+                if (!username || !password) {
+                    alert('Please enter both username and password');
+                    event.preventDefault(); // Prevent the form from submitting
+                }
+                // Assuming the form submission is successful, redirect to the menu page
+                else {
+                    window.location.href = "{{ url_for('menu') }}?username=" + encodeURIComponent(username);
+                    // You can modify the query parameters or URL structure as needed
+                    event.preventDefault(); // Prevent the form from submitting
+                }
+            });
+        </script>
+        
+    </div>
+</body>
+</html>

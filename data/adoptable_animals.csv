@@ -1,0 +1,56 @@
+id,name,species,age,description,contact
+1,Dog,Canine,3,Friendly dog looking for a loving home,contact@example.com
+2,Cat,Feline,2,Cuddly cat seeking a new family,contact@example.com
+3,Rabbit,Lagomorph,1,Playful rabbit ready for adoption,contact@example.com
+4,Bird,Avian,2,Colorful bird looking for a forever home,contact@example.com
+5,Snake,Reptile,4,Friendly snake in need of a caring owner,contact@example.com
+6,Hamster,Rodent,1,Cute hamster seeking a cozy home,contact@example.com
+7,Turtle,Reptile,3,Easygoing turtle looking for a new habitat,contact@example.com
+8,Fish,Aquatic,1,Vibrant fish ready for adoption,contact@example.com
+9,Horse,Equine,5,Gentle horse seeking a loving owner,contact@example.com
+10,Guinea Pig,Rodent,1,Sociable guinea pig ready for a forever home,contact@example.com
+11,Ferret,Mustelid,2,Playful ferret in need of a caring family,contact@example.com
+12,Parrot,Avian,3,Talkative parrot looking for a talkative owner,contact@example.com
+13,Lizard,Reptile,2,Curious lizard ready for adoption,contact@example.com
+14,Chinchilla,Rodent,1,Adorable chinchilla seeking a loving home,contact@example.com
+15,Spider,Arachnid,1,Friendly spider ready for adoption,contact@example.com
+16,Gecko,Reptile,1,Easygoing gecko looking for a new home,contact@example.com
+17,Mouse,Rodent,1,Small mouse seeking a cozy space,contact@example.com
+18,Goat,Caprine,3,Playful goat ready for adoption,contact@example.com
+19,Donkey,Equine,4,Gentle donkey seeking a loving family,contact@example.com
+20,Snail,Mollusk,1,Slow and steady snail looking for a new habitat,contact@example.com
+21,Lion,Feline,4,Majestic lion seeking a kingdom to rule,contact@example.com
+22,Kangaroo,Marsupial,2,Energetic kangaroo ready for adoption,contact@example.com
+23,Otter,Mustelid,2,Curious otter looking for a new home,contact@example.com
+24,Bear,Ursine,5,Adorable bear seeking a caring owner,contact@example.com
+25,Penguin,Bird,3,Charming penguin ready for a new adventure,contact@example.com
+26,Elephant,Pachyderm,6,Gentle elephant in need of a loving family,contact@example.com
+27,Giraffe,Mammal,4,Tall and graceful giraffe ready for adoption,contact@example.com
+28,Cheetah,Feline,3,Speedy cheetah looking for an active owner,contact@example.com
+29,Hedgehog,Insectivore,1,Cute hedgehog seeking a cozy nest,contact@example.com
+30,Raccoon,Mustelid,2,Curious raccoon ready for a new home,contact@example.com
+31,Sloth,Mammal,2,Relaxed sloth looking for a laid-back owner,contact@example.com
+32,Tiger,Feline,5,Majestic tiger seeking a kingdom to roam,contact@example.com
+33,Panda,Bear,3,Adorable panda ready for adoption,contact@example.com
+34,Seal,Aquatic,2,Playful seal looking for a watery home,contact@example.com
+35,Koala,Marsupial,3,Cuddly koala seeking a eucalyptus-filled habitat,contact@example.com
+36,Ostrich,Bird,2,Striking ostrich ready for a new adventure,contact@example.com
+37,Shark,Fish,4,Fearless shark ready for adoption,contact@example.com
+38,Deer,Cervid,3,Graceful deer seeking a serene forest,contact@example.com
+39,Octopus,Mollusk,1,Intelligent octopus looking for a new home,contact@example.com
+40,Porcupine,Rodent,2,Spiky porcupine seeking a caring family,contact@example.com
+41,Alpaca,Camelid,2,Fluffy alpaca ready for adoption,contact@example.com
+42,Bat,Mammal,1,Nocturnal bat seeking a dark and cozy roost,contact@example.com
+43,Peacock,Bird,2,Colorful peacock ready to dazzle,contact@example.com
+44,Leopard,Feline,3,Sleek leopard seeking a comfortable spot,contact@example.com
+45,Gorilla,Primate,5,Gentle gorilla ready for adoption,contact@example.com
+46,Hippopotamus,Mammal,4,Happy hippopotamus seeking a watery home,contact@example.com
+47,Rhino,Mammal,3,Majestic rhinoceros ready for adoption,contact@example.com
+48,Wolf,Canine,3,Wise wolf looking for a new pack,contact@example.com
+49,Armadillo,Mammal,2,Armored armadillo ready for adoption,contact@example.com
+50,Bison,Bovine,4,Strong bison seeking a spacious prairie,contact@example.com
+
+51,hhh,h,1,hh,hh
+52,rr,rr,1,rr,rr
+53,hh,hh,2,hh,hh
+,,,,

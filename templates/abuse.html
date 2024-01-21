@@ -1,0 +1,39 @@
+<!-- report_abuse.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='st.css') }}">
+    <title>Report Animal Abuse</title>
+</head>
+<body>
+    <h1>Report Animal Abuse</h1>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form method="post" action="{{ url_for('report_abuse') }}">
+        <label for="abuse_type">Type of Abuse:</label>
+        <select id="abuse_type" name="abuse_type" required>
+            <option value="physical">Physical Abuse</option>
+            <option value="neglect">Neglect</option>
+            <option value="emotional">Emotional Abuse</option>
+            <!-- Add more options if needed -->
+        </select><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

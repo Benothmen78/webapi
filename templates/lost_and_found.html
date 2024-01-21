@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='st.css') }}">
+    <title>Lost and Found Animals</title>
+</head>
+<body>
+    <h1>Lost and Found Animals</h1>
+
+    <h2>Current Lost and Found Animals:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Species</th>
+                <th>Description</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for animal in lfanimals %}
+                <tr>
+                    <td>{{ animal.name }}</td>
+                    <td>{{ animal.species }}</td>
+                    <td>{{ animal.description }}</td>
+                    <td>{{ animal.contact }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <hr> <!-- Add a horizontal line for visual separation -->
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form method="post" action="{{ url_for('lost_and_found') }}">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="species">Species:</label>
+        <input type="text" id="species" name="species" required><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br>
+
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
